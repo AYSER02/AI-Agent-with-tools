@@ -34,6 +34,29 @@ The agent acts as the decision-making layer, while tools perform specific tasks 
 - GitHub Codespaces
 
 
+## How to Run
+
+1. Open in GitHub Codespaces
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Initialize database:
+   ```bash
+   python src/database.py
+   ```
+
+4. Run agent:
+   ```bash
+   cd src
+   python agent.py
+   ```
+
+## Security
+
+API keys are stored securely using GitHub Codespaces secrets.
+
 ## API Key Configuration
 
 This project uses the OpenAI API.
