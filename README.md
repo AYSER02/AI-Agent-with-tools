@@ -32,3 +32,42 @@ The agent acts as the decision-making layer, while tools perform specific tasks 
 - OpenAI API
 - SQLite
 - GitHub Codespaces
+
+
+## API Key Configuration
+
+This project uses the OpenAI API.
+
+### Recommended (GitHub Codespaces)
+
+1. Go to the repository on GitHub
+2. Navigate to **Settings → Secrets and variables → Codespaces**
+3. Add a new secret:
+   - Name: `OPENAI_API_KEY`
+   - Value: your OpenAI API key
+4. Restart the Codespace if needed
+
+The API key will be automatically available as an environment variable.
+
+### Temporary (Not Recommended for Production)
+
+```bash
+export OPENAI_API_KEY="your_api_key_here"
+
+
+This tells reviewers:
+- You understand **security**
+- You know **real workflows**
+- You’re not leaking secrets
+
+---
+
+## 🔍 Quick Sanity Check (Do This Once)
+
+Run:
+
+```bash
+python
+
+import os
+print(os.getenv("OPENAI_API_KEY") is not None)
